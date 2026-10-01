@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Luxé project preview</title>
+  <desc id="desc">A refined charcoal and teal landing page concept for the Luxé web project.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101716"/><stop offset="1" stop-color="#29352e"/></linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d6f2e9"/><stop offset=".48" stop-color="#8fbdb0"/><stop offset="1" stop-color="#33544c"/></linearGradient>
+    <radialGradient id="halo"><stop stop-color="#50d3b7" stop-opacity=".25"/><stop offset="1" stop-color="#50d3b7" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/><circle cx="823" cy="306" r="385" fill="url(#halo)"/>
+  <rect x="92" y="64" width="1016" height="502" rx="25" fill="#111a18" stroke="#4c6760" stroke-width="2"/>
+  <path d="M92 101h1016" stroke="#344943" stroke-width="2"/><circle cx="124" cy="83" r="6" fill="#ec756d"/><circle cx="146" cy="83" r="6" fill="#e2bf70"/><circle cx="168" cy="83" r="6" fill="#70c69f"/>
+  <text x="142" y="151" fill="#d8e3dd" font-family="Georgia,serif" font-size="28" letter-spacing="7">LUXÉ</text>
+  <text x="718" y="142" fill="#a1b2ac" font-family="Arial,sans-serif" font-size="13" letter-spacing="1">COLLECTION</text><text x="840" y="142" fill="#a1b2ac" font-family="Arial,sans-serif" font-size="13" letter-spacing="1">OUR STORY</text><text x="970" y="142" fill="#a1b2ac" font-family="Arial,sans-serif" font-size="13" letter-spacing="1">CONTACT</text>
+  <path d="M142 178h914" stroke="#344943"/>
+  <text x="150" y="249" fill="#6cdcc4" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="4">A REFINED DIGITAL EXPERIENCE</text>
+  <text x="145" y="311" fill="#eff3ef" font-family="Georgia,serif" font-size="48" font-weight="400">Discover Luxé</text>
+  <text x="149" y="353" fill="#9caaa3" font-family="Arial,sans-serif" font-size="17">An elegant online experience, thoughtfully designed.</text>
+  <rect x="149" y="390" width="157" height="43" rx="4" fill="#63d7be"/><text x="170" y="417" fill="#10201d" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1">EXPLORE LUXÉ ↗</text>
+  <ellipse cx="827" cy="454" rx="187" ry="22" fill="#090f0e" opacity=".7"/>
+  <path d="M762 256h130l22 171q3 23-19 23H759q-22 0-19-23z" fill="url(#glass)" stroke="#d0e6de" stroke-opacity=".6" stroke-width="2"/>
+  <path d="M792 224h70v39h-70z" rx="4" fill="#263933" stroke="#91c9b9" stroke-width="2"/><path d="M778 329h100v49H778z" fill="#152522" fill-opacity=".82" stroke="#c7e4da" stroke-opacity=".6"/>
+  <text x="794" y="359" fill="#d7e9e2" font-family="Georgia,serif" font-size="18" letter-spacing="4">LUXÉ</text>
+  <path d="M696 444c17-22 31-37 54-44M924 441c18-22 31-32 54-38" stroke="#6bd5ba" stroke-width="3" fill="none" opacity=".8"/>
+  <circle cx="703" cy="405" r="12" fill="#467a68"/><circle cx="979" cy="390" r="11" fill="#467a68"/><circle cx="957" cy="413" r="9" fill="#315e51"/>
+</svg>

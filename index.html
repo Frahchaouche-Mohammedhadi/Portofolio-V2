@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101716">
+  <meta name="description" content="A personal portfolio for a curious web developer building thoughtful digital experiences.">
+  <title>Frah Chaouche Mohammed Hadi — Front-end Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/avatar.png">
+  <script>
+    (() => {
+      const saved = localStorage.getItem('portfolio-theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.classList.toggle('dark', saved ? saved === 'dark' : prefersDark);
+    })();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    :root { color-scheme: light; --page:#f2f5f3; --surface:#fff; --surface-soft:#e9efec; --ink:#14201d; --muted:#687671; --line:#dce5e0; --accent:#087f70; --accent-soft:#d8eee8; }
+    .dark { color-scheme: dark; --page:#101716; --surface:#17201e; --surface-soft:#1d2926; --ink:#e7eeea; --muted:#9baaa4; --line:#2b3935; --accent:#72d7c0; --accent-soft:#213b35; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--page); color:var(--ink); font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; transition:background-color .25s,color .25s; }
+    html[lang="ar"] body { font-family:"Cairo",ui-sans-serif,system-ui,sans-serif; }
+    .surface { background:var(--surface); border:1px solid var(--line); }
+    .soft-surface { background:var(--surface-soft); }
+    .muted { color:var(--muted); }
+    .accent { color:var(--accent); }
+    .tag { display:inline-flex; border-radius:9999px; padding:.25rem .625rem; font-size:11px; font-weight:500; color:var(--ink); background:var(--surface-soft); }
+    .nav-tab { color:var(--muted); transition:color .2s,background .2s; }
+    .nav-tab:hover,.nav-tab[aria-selected="true"] { color:var(--ink); background:var(--surface-soft); }
+    .nav-tab[aria-selected="true"]::after { content:""; position:absolute; bottom:-1px; inset-inline:12px; height:2px; border-radius:2px; background:var(--accent); }
+    .theme-orbit { position:absolute; top:5px; left:5px; transition:left .35s cubic-bezier(.2,.8,.2,1); }
+    .dark .theme-orbit { left:29px; }
+    .panel-enter { animation:rise .28s ease both; }
+    @keyframes rise { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+    .grid-dots { background-image:radial-gradient(var(--line) 1px,transparent 1px); background-size:18px 18px; }
+    input,textarea { color:var(--ink); background:var(--page); }
+    input::placeholder,textarea::placeholder { color:var(--muted); }
+    input:focus,textarea:focus { outline:2px solid var(--accent); outline-offset:1px; }
+    @media (prefers-reduced-motion: reduce) { *,*::before,*::after { scroll-behavior:auto!important; animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; } }
+  </style>
+</head>
+<body class="min-h-screen antialiased">
+  <div class="min-h-screen overflow-hidden relative">
+    <div class="pointer-events-none absolute -top-48 -right-28 h-96 w-96 rounded-full blur-3xl opacity-20" style="background:var(--accent)"></div>
+    <div class="pointer-events-none absolute top-24 left-0 h-[26rem] w-32 grid-dots opacity-50"></div>
+
+    <header class="relative z-10 mx-auto max-w-6xl px-5 pt-5 sm:px-8 sm:pt-8">
+      <div class="flex items-center justify-between gap-3">
+        <a href="#home" data-home-link class="flex items-center gap-3 rounded-xl focus-visible:outline-2 focus-visible:outline-offset-4" aria-label="Frah Chaouche Mohammed Hadi, Home">
+          <img src="assets/navbar-avatar.png" alt="Illustrated portrait of a bearded web developer holding a tablet" data-i18n-alt="avatarAlt" class="h-10 w-10 rounded-xl object-cover">
+          <span class="hidden text-sm font-semibold tracking-tight sm:block" data-i18n="brandLabel">Frah chaouche Mohammed hadi - WEB DEV</span>
+        </a>
+        <div class="flex items-center gap-2 sm:gap-3">
+          <button id="language-toggle" type="button" class="rounded-full border px-3 py-2 text-xs font-semibold transition hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-2" style="border-color:var(--line)" aria-label="Switch language to Arabic">عربي <span aria-hidden="true" class="muted">↗</span></button>
+          <button id="theme-toggle" type="button" class="group relative flex h-10 w-[62px] items-center rounded-full border p-1 focus-visible:outline-2 focus-visible:outline-offset-2" style="border-color:var(--line);background:var(--surface)" aria-label="Switch to light mode" aria-pressed="true">
+            <span class="relative grid h-7 w-7 place-items-center rounded-full shadow-sm theme-orbit" style="background:var(--accent-soft);color:var(--accent)">
+              <svg class="sun-icon h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path stroke-linecap="round" d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+              <svg class="moon-icon hidden h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.2 15.4A8.5 8.5 0 0 1 8.6 3.8 8.6 8.6 0 1 0 20.2 15.4Z"/></svg>
+            </span>
+          </button>
+        </div>
+      </div>
+      <nav class="mt-7 -mx-1 overflow-x-auto pb-1" aria-label="Portfolio categories">
+        <div id="category-tabs" role="tablist" class="flex min-w-max gap-1 border-b" style="border-color:var(--line)">
+          <button class="nav-tab relative rounded-t-lg px-4 py-3 text-sm font-medium" role="tab" id="tab-home" aria-controls="panel" aria-selected="true" data-category="home" data-i18n="navHome">Home</button>
+          <button class="nav-tab relative rounded-t-lg px-4 py-3 text-sm font-medium" role="tab" id="tab-skills" aria-controls="panel" aria-selected="false" tabindex="-1" data-category="skills" data-i18n="navSkills">Skills</button>
+          <button class="nav-tab relative rounded-t-lg px-4 py-3 text-sm font-medium" role="tab" id="tab-projects" aria-controls="panel" aria-selected="false" tabindex="-1" data-category="projects" data-i18n="navProjects">Projects</button>
+          <button class="nav-tab relative rounded-t-lg px-4 py-3 text-sm font-medium" role="tab" id="tab-about" aria-controls="panel" aria-selected="false" tabindex="-1" data-category="about" data-i18n="navAbout">About</button>
+          <button class="nav-tab relative rounded-t-lg px-4 py-3 text-sm font-medium" role="tab" id="tab-contact" aria-controls="panel" aria-selected="false" tabindex="-1" data-category="contact" data-i18n="navContact">Contact</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="relative z-10 mx-auto max-w-6xl px-5 pb-16 pt-8 sm:px-8 sm:pt-12" id="panel" role="tabpanel" aria-labelledby="tab-home" tabindex="0">
+      <!-- Each category is a focused view; Home includes the intro and featured work. -->
+      <section data-view="home" class="panel-enter">
+        <div class="grid items-center gap-10 lg:grid-cols-[1.15fr_.85fr] lg:gap-16">
+          <div>
+            <p class="mb-5 flex items-center gap-2 text-xs font-semibold uppercase tracking-[.2em] accent"><span class="h-px w-7" style="background:var(--accent)"></span><span data-i18n="eyebrow">Available for select projects</span></p>
+            <h1 class="max-w-2xl text-4xl font-semibold leading-[1.12] tracking-[-.045em] sm:text-6xl" data-i18n="heroTitle">Thoughtful websites,<br><span class="accent">made with care.</span></h1>
+            <p class="muted mt-5 max-w-xl text-base leading-7 sm:text-lg" data-i18n="heroBody">I’m Frah Chaouche Mohammed Hadi, a junior web developer turning ideas into clear, useful experiences on the web.</p>
+            <div class="mt-7 flex flex-wrap gap-3">
+              <button type="button" data-go="projects" class="rounded-xl px-5 py-3 text-sm font-semibold text-[#10201c] transition hover:-translate-y-0.5" style="background:var(--accent)" data-i18n="seeWork">Explore my work <span aria-hidden="true">↗</span></button>
+              <button type="button" data-go="contact" class="surface rounded-xl px-5 py-3 text-sm font-semibold transition hover:-translate-y-0.5" data-i18n="sayHello">Say hello <span aria-hidden="true">↗</span></button>
+            </div>
+            <div class="muted mt-9 flex items-center gap-3 text-xs"><span class="relative flex h-2.5 w-2.5"><span class="absolute inline-flex h-full w-full animate-ping rounded-full opacity-50" style="background:var(--accent)"></span><span class="relative inline-flex h-2.5 w-2.5 rounded-full" style="background:var(--accent)"></span></span><span data-i18n="location">Based in Aindefla · Working worldwide</span></div>
+          </div>
+          <div class="relative mx-auto w-full max-w-md">
+            <div class="absolute -inset-3 rotate-[-3deg] rounded-[2rem] border" style="border-color:var(--line)"></div>
+            <div class="surface relative overflow-hidden rounded-[1.75rem] p-6 sm:p-8">
+              <div class="flex items-center justify-between"><span class="muted text-xs font-medium uppercase tracking-[.16em]" data-i18n="currently">Currently</span><span class="muted text-xs">01 / 02</span></div>
+              <div class="my-8 flex h-48 items-center justify-center rounded-2xl soft-surface">
+                <div class="relative h-28 w-28"><img src="assets/avatar.png" alt="Illustrated portrait of a bearded web developer holding a tablet" data-i18n-alt="avatarAlt" class="h-full w-full rounded-[2rem] object-cover shadow-lg"><span class="absolute -right-2 -top-2 h-5 w-5 rounded-full border-4" style="background:var(--page);border-color:var(--surface)"></span></div>
+              </div>
+              <h2 class="text-xl font-semibold tracking-tight" data-i18n="role">Front-end Developer</h2>
+              <p class="muted mt-2 text-sm leading-6" data-i18n="cardSummary">Learning, building, and refining small details that make digital products feel effortless.</p>
+              <div class="mt-6 flex flex-wrap gap-2"><span class="rounded-full px-3 py-1.5 text-xs font-medium soft-surface">HTML & CSS</span><span class="rounded-full px-3 py-1.5 text-xs font-medium soft-surface">JavaScript</span><span class="rounded-full px-3 py-1.5 text-xs font-medium soft-surface">UI Design</span></div>
+            </div>
+            <span class="absolute -bottom-5 -left-4 grid h-14 w-14 rotate-6 place-items-center rounded-2xl border text-xl shadow-sm" style="background:var(--surface);border-color:var(--line)" aria-hidden="true">✳</span>
+          </div>
+        </div>
+        <div class="mt-16 sm:mt-24">
+          <div class="mb-5 flex items-end justify-between gap-4"><div><p class="accent text-xs font-semibold uppercase tracking-[.18em]" data-i18n="selectedWork">Selected work</p><h2 class="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl" data-i18n="featuredTitle">A few things I’ve made</h2></div><button type="button" data-go="projects" class="muted hidden text-sm font-medium transition hover:opacity-70 sm:block" data-i18n="allProjects">All projects ↗</button></div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <article class="surface group rounded-2xl p-5 transition hover:-translate-y-1 sm:p-6"><a href="https://frahchaouche-mohammedhadi.github.io/Portofolio-V1/" target="_blank" rel="noopener noreferrer" class="block rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2" aria-label="Open Portofolio V1 project" data-i18n-aria="projectOneLinkAria"><img src="assets/project-portfolio.svg" alt="Dark charcoal portfolio preview with a developer profile and teal details" data-i18n-alt="projectOneImageAlt" class="mb-5 h-32 w-full rounded-xl object-cover"><div class="flex items-start justify-between gap-4"><div><p class="muted text-xs" data-i18n="projectOneType">Personal portfolio</p><h3 class="mt-1 text-lg font-semibold" data-i18n="projectOne">Portofolio V1</h3></div><span class="accent text-lg" aria-hidden="true">↗</span></div><p class="muted mt-2 text-sm leading-6" data-i18n="projectOneBody">My first personal portfolio, introducing my work and web development journey.</p></a></article>
+            <article class="surface group rounded-2xl p-5 transition hover:-translate-y-1 sm:p-6"><a href="https://luxe21.netlify.app/" target="_blank" rel="noopener noreferrer" class="block rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2" aria-label="Open Luxé project" data-i18n-aria="projectTwoLinkAria"><img src="assets/project-luxe.svg" alt="Refined charcoal and teal Luxé landing page concept" data-i18n-alt="projectTwoImageAlt" class="mb-5 h-32 w-full rounded-xl object-cover"><div class="flex items-start justify-between gap-4"><div><p class="muted text-xs" data-i18n="projectTwoType">Web design</p><h3 class="mt-1 text-lg font-semibold" data-i18n="projectTwo">Luxé</h3></div><span class="accent text-lg" aria-hidden="true">↗</span></div><p class="muted mt-2 text-sm leading-6" data-i18n="projectTwoBody">A refined web experience with a distinct visual identity.</p></a></article>
+          </div>
+        </div>
+      </section>
+
+      <section data-view="skills" class="hidden panel-enter">
+        <div class="max-w-2xl"><p class="accent text-xs font-semibold uppercase tracking-[.18em]" data-i18n="skillsEyebrow">What I work with</p><h1 class="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl" data-i18n="skillsTitle">Curious by nature.<br>Practical by design.</h1><p class="muted mt-5 max-w-xl leading-7" data-i18n="skillsIntro">I enjoy working across the details: from structure and interactions to the visual rhythm of a page.</p></div>
+        <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="surface rounded-2xl p-6"><span class="accent text-xl">01</span><h2 class="mt-5 text-lg font-semibold" data-i18n="skillOne">Web foundations</h2><p class="muted mt-2 text-sm leading-6" data-i18n="skillOneBody">Semantic HTML, modern CSS, responsive layouts, accessibility basics.</p><div class="mt-5 flex flex-wrap gap-2"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Responsive UI</span></div></article>
+          <article class="surface rounded-2xl p-6"><span class="accent text-xl">02</span><h2 class="mt-5 text-lg font-semibold" data-i18n="skillTwo">Interaction</h2><p class="muted mt-2 text-sm leading-6" data-i18n="skillTwoBody">Building friendly interfaces and clear behaviors with JavaScript.</p><div class="mt-5 flex flex-wrap gap-2"><span class="tag">JavaScript</span><span class="tag">DOM</span><span class="tag">Forms</span></div></article>
+          <article class="surface rounded-2xl p-6"><span class="accent text-xl">03</span><h2 class="mt-5 text-lg font-semibold" data-i18n="skillThree">Design practice</h2><p class="muted mt-2 text-sm leading-6" data-i18n="skillThreeBody">Turning references and rough ideas into consistent, usable screens.</p><div class="mt-5 flex flex-wrap gap-2"><span class="tag">Figma</span><span class="tag">Prototyping</span><span class="tag">Typography</span></div></article>
+        </div>
+        <div class="surface mt-5 rounded-2xl p-6 sm:flex sm:items-center sm:justify-between"><div><h2 class="font-semibold" data-i18n="learningTitle">Always learning</h2><p class="muted mt-1 text-sm" data-i18n="learningBody">Currently exploring accessibility, animation, and better front-end workflows.</p></div><span class="mt-4 inline-flex rounded-full px-3 py-1.5 text-xs font-medium soft-surface sm:mt-0" data-i18n="learningBadge">Now learning · a11y</span></div>
+      </section>
+
+      <section data-view="projects" class="hidden panel-enter">
+        <div class="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div><p class="accent text-xs font-semibold uppercase tracking-[.18em]" data-i18n="projectsEyebrow">Things I’ve built</p><h1 class="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl" data-i18n="projectsTitle">Selected projects</h1><p class="muted mt-4 max-w-xl leading-7" data-i18n="projectsIntro">Small, considered projects where I’ve practiced turning a problem into a useful interface.</p></div><span class="muted text-sm">02 <span aria-hidden="true">/</span> 02</span></div>
+        <div class="mt-9 grid gap-4 sm:grid-cols-2">
+          <article class="surface rounded-2xl p-5 transition hover:-translate-y-1 sm:p-6"><a href="https://frahchaouche-mohammedhadi.github.io/Portofolio-V1/" target="_blank" rel="noopener noreferrer" class="block rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2"><img src="assets/project-portfolio.svg" alt="Dark portfolio website preview with teal details" data-i18n-alt="projectOneImageAlt" class="mb-5 h-44 w-full rounded-xl object-cover"><p class="muted text-xs" data-i18n="projectOneType">Personal portfolio</p><h2 class="mt-1 text-xl font-semibold" data-i18n="projectOne">Portofolio V1</h2><p class="muted mt-2 text-sm leading-6" data-i18n="projectOneBody">My first personal portfolio site, where I introduce myself and share my work.</p><div class="mt-4 flex gap-2"><span class="tag" data-i18n="projectTagPortfolio">Portfolio</span><span class="tag" data-i18n="projectTagWeb">Web</span></div><span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold accent" data-i18n="visitProjectOne">Visit Portofolio V1 <span aria-hidden="true">↗</span></span></a></article>
+          <article class="surface rounded-2xl p-5 transition hover:-translate-y-1 sm:p-6"><a href="https://luxe21.netlify.app/" target="_blank" rel="noopener noreferrer" class="block rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2"><img src="assets/project-luxe.svg" alt="Refined dark Luxé project preview with teal highlights" data-i18n-alt="projectTwoImageAlt" class="mb-5 h-44 w-full rounded-xl object-cover"><p class="muted text-xs" data-i18n="projectTwoType">Web design</p><h2 class="mt-1 text-xl font-semibold" data-i18n="projectTwo">Luxé</h2><p class="muted mt-2 text-sm leading-6" data-i18n="projectTwoBody">A refined web project with a distinct visual identity.</p><div class="mt-4 flex gap-2"><span class="tag" data-i18n="projectTagDesign">Design</span><span class="tag" data-i18n="projectTagWeb">Web</span></div><span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold accent" data-i18n="visitProjectTwo">Visit Luxé <span aria-hidden="true">↗</span></span></a></article>
+        </div>
+        <p class="muted mt-6 text-xs" data-i18n="projectNote">Preview artwork is illustrative. Visit each project to see the live site.</p>
+      </section>
+
+      <section data-view="about" class="hidden panel-enter">
+        <div class="grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:gap-14">
+          <div class="surface flex min-h-72 items-center justify-center rounded-3xl p-8"><div class="relative h-36 w-36"><img src="assets/avatar.png" alt="Illustrated portrait of a bearded web developer holding a tablet" data-i18n-alt="avatarAlt" class="h-full w-full rounded-[2.5rem] object-cover shadow-xl"><span class="absolute -bottom-3 -right-3 grid h-12 w-12 place-items-center rounded-2xl border text-xl" style="background:var(--surface);border-color:var(--line)" aria-hidden="true">✳</span></div></div>
+          <div class="py-2"><p class="accent text-xs font-semibold uppercase tracking-[.18em]" data-i18n="aboutEyebrow">A little about me</p><h1 class="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl" data-i18n="aboutTitle">Hello, I’m Frah Chaouche Mohammed Hadi.</h1><p class="muted mt-5 text-base leading-7" data-i18n="aboutBodyOne">I’m a junior web developer based in Aindefla, drawn to the space where thoughtful design meets useful technology. I like making the web feel a little simpler, clearer, and more human.</p><p class="muted mt-4 text-base leading-7" data-i18n="aboutBodyTwo">Outside the browser, you’ll find me collecting good ideas, learning something new, or taking the long way home with a camera.</p>
+            <div class="mt-8 grid gap-3 sm:grid-cols-2"><div class="rounded-xl p-4 soft-surface"><p class="muted text-xs" data-i18n="aboutFocusLabel">My focus</p><p class="mt-1 text-sm font-semibold" data-i18n="aboutFocus">Accessible, thoughtful interfaces</p></div><div class="rounded-xl p-4 soft-surface"><p class="muted text-xs" data-i18n="aboutValuesLabel">I value</p><p class="mt-1 text-sm font-semibold" data-i18n="aboutValues">Curiosity · Care · Clarity</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section data-view="contact" class="hidden panel-enter">
+        <div class="grid gap-9 lg:grid-cols-[.9fr_1.1fr] lg:gap-16"><div><p class="accent text-xs font-semibold uppercase tracking-[.18em]" data-i18n="contactEyebrow">Have something in mind?</p><h1 class="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl" data-i18n="contactTitle">Let’s make it<br>happen.</h1><p class="muted mt-5 max-w-md leading-7" data-i18n="contactIntro">Have a project, a question, or just want to say hi? Send me a note and I’ll get back to you.</p><a class="mt-7 inline-flex items-center gap-2 text-sm font-semibold accent" href="mailto:Hadifrahchaouch@gmail.com">Hadifrahchaouch@gmail.com <span aria-hidden="true">↗</span></a><p class="muted mt-8 text-xs" data-i18n="contactLocation">Aindefla, Algeria · Open to remote collaboration</p></div>
+          <form id="contact-form" class="surface rounded-2xl p-5 sm:p-7">
+            <label for="name" class="mb-2 block text-sm font-medium" data-i18n="nameLabel">Your name</label><input id="name" name="name" autocomplete="name" required maxlength="100" class="mb-5 w-full rounded-xl border px-4 py-3 text-sm" style="border-color:var(--line)" placeholder="Jane Smith" data-i18n-placeholder="namePlaceholder">
+            <label for="email" class="mb-2 block text-sm font-medium" data-i18n="emailLabel">Email address</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="254" class="mb-5 w-full rounded-xl border px-4 py-3 text-sm" style="border-color:var(--line)" placeholder="jane@example.com" data-i18n-placeholder="emailPlaceholder">
+            <label for="message" class="mb-2 block text-sm font-medium" data-i18n="messageLabel">Your message</label><textarea id="message" name="message" required minlength="5" maxlength="2000" rows="5" class="mb-5 w-full resize-y rounded-xl border px-4 py-3 text-sm" style="border-color:var(--line)" placeholder="Tell me a little about it…" data-i18n-placeholder="messagePlaceholder"></textarea>
+            <button type="submit" class="w-full rounded-xl px-5 py-3 text-sm font-semibold text-[#10201c] transition hover:opacity-85" style="background:var(--accent)" data-i18n="sendMessage">Open email app <span aria-hidden="true">↗</span></button><p id="form-status" class="muted mt-3 min-h-5 text-xs" role="status" aria-live="polite" data-i18n="formNote">Your email app will open with your message ready to send.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="relative z-10 mx-auto flex max-w-6xl flex-col gap-3 border-t px-5 py-6 text-xs sm:flex-row sm:items-center sm:justify-between sm:px-8" style="border-color:var(--line)"><span class="muted" data-i18n="footerCopy">© 2026 Frah Chaouche Mohammed Hadi. Made with care.</span><div class="flex gap-5"><a class="muted transition hover:opacity-70" href="https://github.com/" target="_blank" rel="noreferrer" data-i18n="github">GitHub ↗</a><a class="muted transition hover:opacity-70" href="https://www.linkedin.com/" target="_blank" rel="noreferrer" data-i18n="linkedin">LinkedIn ↗</a></div></footer>
+  </div>
+  <script>
+    const translations = {
+      en: {
+        navHome:'Home',navSkills:'Skills',navProjects:'Projects',navAbout:'About',navContact:'Contact',brandLabel:'Frah chaouche Mohammed hadi - WEB DEV',
+        projectOneImageAlt:'Dark charcoal portfolio preview with teal highlights',projectTwoImageAlt:'Refined charcoal and teal Luxé project preview',projectTagPortfolio:'Portfolio',projectTagWeb:'Web',projectTagDesign:'Design',visitProjectOne:'Visit Portofolio V1 <span aria-hidden="true">↗</span>',projectOneLinkAria:'Open Portofolio V1 project',visitProjectTwo:'Visit Luxé <span aria-hidden="true">↗</span>',projectTwoLinkAria:'Open Luxé project',
+        avatarAlt:'Illustrated portrait of a bearded web developer holding a tablet',eyebrow:'Available for select projects',heroTitle:'Thoughtful websites,<br><span class="accent">made with care.</span>',heroBody:'I’m Frah Chaouche Mohammed Hadi, a junior web developer turning ideas into clear, useful experiences on the web.',seeWork:'Explore my work <span aria-hidden="true">↗</span>',sayHello:'Say hello <span aria-hidden="true">↗</span>',location:'Based in Aindefla · Working worldwide',currently:'Currently',role:'Front-end Developer',cardSummary:'Learning, building, and refining small details that make digital products feel effortless.',selectedWork:'Selected work',featuredTitle:'A few things I’ve made',allProjects:'All projects ↗',projectOneType:'Personal portfolio',projectOne:'Portofolio V1',projectOneBody:'My first personal portfolio site, where I introduce myself and share my work.',projectTwoType:'Web design',projectTwo:'Luxé',projectTwoBody:'A refined web project with a distinct visual identity.',
+        skillsEyebrow:'What I work with',skillsTitle:'Curious by nature.<br>Practical by design.',skillsIntro:'I enjoy working across the details: from structure and interactions to the visual rhythm of a page.',skillOne:'Web foundations',skillOneBody:'Semantic HTML, modern CSS, responsive layouts, accessibility basics.',skillTwo:'Interaction',skillTwoBody:'Building friendly interfaces and clear behaviors with JavaScript.',skillThree:'Design practice',skillThreeBody:'Turning references and rough ideas into consistent, usable screens.',learningTitle:'Always learning',learningBody:'Currently exploring accessibility, animation, and better front-end workflows.',learningBadge:'Now learning · a11y',
+        projectsEyebrow:'Things I’ve built',projectsTitle:'Selected projects',projectsIntro:'Small, considered projects where I’ve practiced turning a problem into a useful interface.',projectNote:'Preview artwork is illustrative. Visit each project to see the live site.',aboutEyebrow:'A little about me',aboutTitle:'Hello, I’m Frah Chaouche Mohammed Hadi.',aboutBodyOne:'I’m a junior web developer based in Aindefla, drawn to the space where thoughtful design meets useful technology. I like making the web feel a little simpler, clearer, and more human.',aboutBodyTwo:'Outside the browser, you’ll find me collecting good ideas, learning something new, or taking the long way home with a camera.',aboutFocusLabel:'My focus',aboutFocus:'Accessible, thoughtful interfaces',aboutValuesLabel:'I value',aboutValues:'Curiosity · Care · Clarity',contactEyebrow:'Have something in mind?',contactTitle:'Let’s make it<br>happen.',contactIntro:'Have a project, a question, or just want to say hi? Send me a note and I’ll get back to you.',contactLocation:'Aindefla, Algeria · Open to remote collaboration',nameLabel:'Your name',emailLabel:'Email address',messageLabel:'Your message',namePlaceholder:'Jane Smith',emailPlaceholder:'jane@example.com',messagePlaceholder:'Tell me a little about it…',sendMessage:'Open email app <span aria-hidden="true">↗</span>',formNote:'Your email app will open with your message ready to send.',formError:'Please check the required fields and try again.',formOpened:'Your email app should open with the message ready to send.',footerCopy:'© 2026 Frah Chaouche Mohammed Hadi. Made with care.',github:'GitHub ↗',linkedin:'LinkedIn ↗',languageButton:'عربي <span aria-hidden="true" class="muted">↗</span>',languageLabel:'Switch language to Arabic',themeLight:'Switch to light mode',themeDark:'Switch to dark mode',pageTitle:'Frah Chaouche Mohammed Hadi — Front-end Developer'
+      },
+      ar: {
+        navHome:'الرئيسية',navSkills:'المهارات',navProjects:'المشاريع',navAbout:'نبذة عني',navContact:'تواصل معي',brandLabel:'فرح شاوش محمد هادي - مطوّر ويب',
+        projectOneImageAlt:'معاينة لموقع محفظة شخصية داكن بتفاصيل تركوازية',projectTwoImageAlt:'معاينة أنيقة لمشروع Luxé بألوان داكنة ولمسات تركوازية',projectTagPortfolio:'محفظة شخصية',projectTagWeb:'ويب',projectTagDesign:'تصميم',visitProjectOne:'زيارة Portofolio V1 <span aria-hidden="true">↗</span>',projectOneLinkAria:'فتح مشروع Portofolio V1',visitProjectTwo:'زيارة Luxé <span aria-hidden="true">↗</span>',projectTwoLinkAria:'فتح مشروع Luxé',
+        avatarAlt:'رسم توضيحي لمطوّر ويب ملتحٍ يحمل جهازاً لوحياً',eyebrow:'متاح لمشاريع مختارة',heroTitle:'مواقع إلكترونية مدروسة،<br><span class="accent">مصممة بعناية.</span>',heroBody:'أنا فرح شاوش محمد هادي، مطوّر واجهات ويب مبتدئ أحوّل الأفكار إلى تجارب رقمية واضحة ومفيدة.',seeWork:'اكتشف أعمالي <span aria-hidden="true">↗</span>',sayHello:'أرسل تحية <span aria-hidden="true">↗</span>',location:'مقيم في عين الدفلى · أعمل مع الجميع',currently:'حالياً',role:'مطوّر واجهات أمامية',cardSummary:'أتعلم وأبني وأهتم بالتفاصيل الصغيرة التي تجعل المنتجات الرقمية سهلة الاستخدام.',selectedWork:'أعمال مختارة',featuredTitle:'بعض ما أنجزته',allProjects:'كل المشاريع ↗',projectOneType:'محفظة شخصية',projectOne:'Portofolio V1',projectOneBody:'موقعي الشخصي الأول لعرض أعمالي ورحلتي في تطوير الويب.',projectTwoType:'تصميم ويب',projectTwo:'Luxé',projectTwoBody:'مشروع ويب أنيق بهوية بصرية مميزة.',
+        skillsEyebrow:'أدواتي ومهاراتي',skillsTitle:'فضولي بطبعي.<br>عملي في تصميمي.',skillsIntro:'أستمتع بالعمل على مختلف التفاصيل، من البنية والتفاعلات إلى الإيقاع البصري للصفحة.',skillOne:'أساسيات الويب',skillOneBody:'HTML دلالي، وCSS حديث، وتصاميم متجاوبة، ومبادئ سهولة الوصول.',skillTwo:'التفاعلات',skillTwoBody:'إنشاء واجهات سهلة الاستخدام وتفاعلات واضحة باستخدام جافاسكريبت.',skillThree:'ممارسة التصميم',skillThreeBody:'تحويل الأفكار والمراجع الأولية إلى واجهات متناسقة وسهلة الاستخدام.',learningTitle:'التعلّم مستمر',learningBody:'أستكشف حالياً سهولة الوصول والرسوم المتحركة وأساليب تطوير أفضل.',learningBadge:'أتعلم الآن · سهولة الوصول',
+        projectsEyebrow:'أعمال أنجزتها',projectsTitle:'مشاريع مختارة',projectsIntro:'مشاريع صغيرة ومدروسة تدربت فيها على تحويل المشكلات إلى واجهات مفيدة.',projectNote:'الصور المعروضة توضيحية. زر كل مشروع للاطلاع على الموقع الفعلي.',aboutEyebrow:'نبذة عني',aboutTitle:'مرحباً، أنا فرح شاوش محمد هادي.',aboutBodyOne:'أنا مطوّر ويب مبتدئ مقيم في عين الدفلى، وأهتم بالمساحة التي يلتقي فيها التصميم المدروس بالتقنية المفيدة. أحب أن أجعل استخدام الويب أبسط وأوضح وأكثر إنسانية.',aboutBodyTwo:'بعيداً عن المتصفح، ستجدني أجمع الأفكار الجميلة، أو أتعلم شيئاً جديداً، أو أعود إلى المنزل بطريق أطول ومعي كاميرتي.',aboutFocusLabel:'مجال تركيزي',aboutFocus:'واجهات سهلة الوصول ومدروسة',aboutValuesLabel:'أقدّر',aboutValues:'الفضول · العناية · الوضوح',contactEyebrow:'هل لديك فكرة؟',contactTitle:'لنجعلها<br>حقيقة.',contactIntro:'هل لديك مشروع أو سؤال أو ترغب في إلقاء التحية؟ أرسل لي رسالة وسأرد عليك.',contactLocation:'عين الدفلى · متاح للتعاون عن بُعد',nameLabel:'اسمك',emailLabel:'بريدك الإلكتروني',messageLabel:'رسالتك',namePlaceholder:'سارة أحمد',emailPlaceholder:'sara@example.com',messagePlaceholder:'أخبرني قليلاً عن فكرتك…',sendMessage:'افتح تطبيق البريد <span aria-hidden="true">↗</span>',formNote:'سيفتح تطبيق البريد ورسالتك جاهزة للإرسال.',formError:'يرجى التحقق من الحقول المطلوبة والمحاولة مجدداً.',formOpened:'من المفترض أن يفتح تطبيق البريد ورسالتك جاهزة للإرسال.',footerCopy:'© ٢٠٢٦ فرح شاوش محمد هادي. صُنع بعناية.',github:'جيت هب ↗',linkedin:'لينكدإن ↗',languageButton:'English <span aria-hidden="true" class="muted">↗</span>',languageLabel:'Switch language to English',themeLight:'التبديل إلى الوضع الفاتح',themeDark:'التبديل إلى الوضع الداكن',pageTitle:'فرح شاوش محمد هادي — مطوّر واجهات أمامية'
+      }
+    };
+    let language = 'en';
+    const tabs = [...document.querySelectorAll('[role="tab"]')];
+    const views = [...document.querySelectorAll('[data-view]')];
+    const panel = document.getElementById('panel');
+    function selectCategory(category, focus = false) {
+      const tab = tabs.find((item) => item.dataset.category === category) || tabs[0];
+      tabs.forEach((item) => {
+        const selected = item === tab;
+        item.setAttribute('aria-selected', String(selected));
+        item.tabIndex = selected ? 0 : -1;
+      });
+      views.forEach((view) => view.classList.toggle('hidden', view.dataset.view !== tab.dataset.category));
+      panel.setAttribute('aria-labelledby', tab.id);
+      if (focus) tab.focus();
+    }
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => selectCategory(tab.dataset.category));
+      tab.addEventListener('keydown', (event) => {
+        let next = index;
+        if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+        else if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+        else if (event.key === 'Home') next = 0;
+        else if (event.key === 'End') next = tabs.length - 1;
+        else return;
+        event.preventDefault();
+        selectCategory(tabs[next].dataset.category, true);
+      });
+    });
+    document.querySelectorAll('[data-go]').forEach((button) => button.addEventListener('click', () => {
+      selectCategory(button.dataset.go);
+      document.querySelector('header').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }));
+    document.querySelector('[data-home-link]').addEventListener('click', (event) => { event.preventDefault(); selectCategory('home'); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+    const themeToggle = document.getElementById('theme-toggle');
+    function syncThemeButton() {
+      const dark = document.documentElement.classList.contains('dark');
+      themeToggle.setAttribute('aria-pressed', String(dark));
+      themeToggle.setAttribute('aria-label', translations[language][dark ? 'themeLight' : 'themeDark']);
+      themeToggle.querySelector('.sun-icon').classList.toggle('hidden', !dark);
+      themeToggle.querySelector('.moon-icon').classList.toggle('hidden', dark);
+      document.querySelector('meta[name="theme-color"]').content = dark ? '#101716' : '#f2f5f3';
+    }
+    themeToggle.addEventListener('click', () => {
+      const dark = !document.documentElement.classList.contains('dark');
+      document.documentElement.classList.toggle('dark', dark);
+      localStorage.setItem('portfolio-theme', dark ? 'dark' : 'light');
+      syncThemeButton();
+    });
+    function setLanguage(next) {
+      language = next;
+      const dictionary = translations[language];
+      document.documentElement.lang = language;
+      document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
+      document.title = dictionary.pageTitle;
+      document.querySelectorAll('[data-i18n]').forEach((element) => {
+        const value = dictionary[element.dataset.i18n];
+        if (value !== undefined) element.innerHTML = value;
+      });
+      document.querySelectorAll('[data-i18n-placeholder]').forEach((element) => {
+        const value = dictionary[element.dataset.i18nPlaceholder];
+        if (value !== undefined) element.placeholder = value;
+      });
+      document.querySelectorAll('[data-i18n-alt]').forEach((element) => {
+        const value = dictionary[element.dataset.i18nAlt];
+        if (value !== undefined) element.alt = value;
+      });
+      document.querySelectorAll('[data-i18n-aria]').forEach((element) => {
+        const value = dictionary[element.dataset.i18nAria];
+        if (value !== undefined) element.setAttribute('aria-label', value);
+      });
+      tabs.forEach((tab) => { tab.setAttribute('aria-label', dictionary[`nav${tab.dataset.category[0].toUpperCase()}${tab.dataset.category.slice(1)}`]); });
+      const languageToggle = document.getElementById('language-toggle');
+      languageToggle.innerHTML = dictionary.languageButton;
+      languageToggle.setAttribute('aria-label', dictionary.languageLabel);
+      document.querySelector('[data-home-link]').setAttribute('aria-label', language === 'ar' ? 'فرح شاوش محمد هادي، الرئيسية' : 'Frah Chaouche Mohammed Hadi, Home');
+      syncThemeButton();
+    }
+    document.getElementById('language-toggle').addEventListener('click', () => setLanguage(language === 'en' ? 'ar' : 'en'));
+    document.getElementById('contact-form').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      if (!form.reportValidity()) return;
+      const data = new FormData(form);
+      const subject = `Portfolio message from ${data.get('name')}`;
+      const body = `${data.get('message')}\n\nFrom: ${data.get('name')} (${data.get('email')})`;
+      const mailto = `mailto:Hadifrahchaouch@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      document.getElementById('form-status').textContent = translations[language].formOpened;
+      window.location.href = mailto;
+    });
+    syncThemeButton();
+    setLanguage('en');
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Portfolio V1 project preview</title>
+  <desc id="desc">A dark charcoal portfolio page preview with teal highlights and a developer profile card.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101716"/><stop offset="1" stop-color="#1d302c"/></linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#21d0b5" stop-opacity=".38"/><stop offset="1" stop-color="#21d0b5" stop-opacity="0"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="975" cy="88" r="350" fill="url(#glow)"/>
+  <g opacity=".15" stroke="#71ddc6"><path d="M0 110h1200M0 520h1200M100 0v630M1100 0v630"/></g>
+  <rect x="92" y="64" width="1016" height="502" rx="25" fill="#111a18" stroke="#4c6760" stroke-width="2"/>
+  <path d="M92 101h1016" stroke="#344943" stroke-width="2"/>
+  <circle cx="124" cy="83" r="6" fill="#ec756d"/><circle cx="146" cy="83" r="6" fill="#e2bf70"/><circle cx="168" cy="83" r="6" fill="#70c69f"/>
+  <rect x="140" y="129" width="14" height="14" rx="4" fill="#62d8c0"/><text x="166" y="142" fill="#e7efeb" font-family="Arial,sans-serif" font-size="16" font-weight="700" letter-spacing="2">MOHAMMED HADI</text>
+  <text x="788" y="141" fill="#95aaa2" font-family="Arial,sans-serif" font-size="13">HOME</text><text x="870" y="141" fill="#95aaa2" font-family="Arial,sans-serif" font-size="13">PROJECTS</text><text x="977" y="141" fill="#95aaa2" font-family="Arial,sans-serif" font-size="13">CONTACT</text>
+  <text x="145" y="222" fill="#6cdcc4" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="3">PERSONAL PORTFOLIO</text>
+  <text x="142" y="286" fill="#edf4f0" font-family="Arial,sans-serif" font-size="52" font-weight="700">PORTOFOLIO</text>
+  <text x="145" y="333" fill="#edf4f0" font-family="Arial,sans-serif" font-size="35" font-weight="500">V1</text>
+  <text x="145" y="376" fill="#a1b2ac" font-family="Arial,sans-serif" font-size="18">My first personal portfolio on the web.</text>
+  <rect x="145" y="410" width="158" height="44" rx="12" fill="#69d9c0"/><text x="169" y="438" fill="#10201d" font-family="Arial,sans-serif" font-size="14" font-weight="700">EXPLORE WORK ↗</text>
+  <rect x="736" y="183" width="290" height="298" rx="23" fill="#1b2925" stroke="#38564d"/>
+  <circle cx="881" cy="292" r="79" fill="#14211e" stroke="#29bba4" stroke-width="4"/>
+  <circle cx="881" cy="268" r="28" fill="#586a64"/><path d="M825 367c7-47 31-73 56-73s50 26 57 73" fill="#273a34" stroke="#62d8c0" stroke-width="3"/>
+  <rect x="790" y="401" width="182" height="8" rx="4" fill="#52655f"/><rect x="818" y="422" width="126" height="7" rx="3.5" fill="#354841"/>
+</svg>
